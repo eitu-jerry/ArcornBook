@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "50194345788",
+    "project_id": "arcornbook",
+    "storage_bucket": "arcornbook.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:50194345788:android:a7329cd1c53cb740ccb839",
+        "android_client_info": {
+          "package_name": "com.eitu.arcornbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "50194345788-q3rn442svrq5bd00vsl4kiedqn5chs8t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.eitu.arcornbook",
+            "certificate_hash": "d3e5b1edbe59fa65ffa069d69b698e3f14a9d39c"
+          }
+        },
+        {
+          "client_id": "50194345788-ggh0viuluafn26j6aqei01rkrk8k0khc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_568pLU9SN92DsT8cF5hPdOOEQQlBxhs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "50194345788-ggh0viuluafn26j6aqei01rkrk8k0khc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

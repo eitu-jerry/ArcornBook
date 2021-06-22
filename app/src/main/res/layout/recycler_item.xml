@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_layout"
+    android:longClickable="true"
+    android:background="@drawable/useinfo_back"
+    android:elevation="2dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/Detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/patternImage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@color/appMainOrangeDown"
+        android:paddingTop="5dp"
+        android:maxLines="1"
+        android:autoSizeTextType="uniform"
+        android:textAlignment="textStart"
+        android:textColor="@color/appMainBrown"
+        android:textSize="20sp"
+        android:text="약국에서 타이레놀"
+        android:fontFamily="@font/app_main_font" />
+
+    <ImageView
+        android:id="@+id/patternImage"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/meal"
+        app:layout_constraintTop_toBottomOf="@id/Detail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+    <TextView
+        android:id="@+id/Pattern"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/patternImage"
+        app:layout_constraintBottom_toBottomOf="@id/patternImage"
+        app:layout_constraintLeft_toRightOf="@id/patternImage"
+        android:layout_marginLeft="5dp"
+        android:paddingTop="1dp"
+        android:background="@color/transparent"
+        android:maxLines="1"
+        android:autoSizeTextType="uniform"
+        android:textAlignment="textStart"
+        android:textColor="@color/appMainOrange"
+        android:textSize="15sp"
+        android:text="병원비"
+        android:fontFamily="@font/app_main_font" />
+
+    <TextView
+        android:id="@+id/Use"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Detail"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/transparent"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="10dp"
+        android:maxLines="1"
+        android:autoSizeTextType="uniform"
+        android:textAlignment="textEnd"
+        android:textSize="25sp"
+        android:text="150,000원"
+        android:textColor="@color/appMainDarkBrown"
+        android:fontFamily="@font/app_main_font" />
+
+    <ImageButton
+        android:id="@+id/deleteButton"
+        android:layout_width="15dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/delete"
+        android:scaleType="fitCenter"
+        android:background="@color/transparent"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

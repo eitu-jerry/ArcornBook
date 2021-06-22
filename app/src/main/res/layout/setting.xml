@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tabWhite">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/popup_title"
+                android:fontFamily="@font/app_main_font"
+                android:textSize="35sp"
+                android:textAlignment="center"
+                android:textColor="@color/appMainOrange"
+                android:text="설정"
+                />
+
+            <TextView
+                android:id="@+id/cashLimit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/app_main_font"
+                android:textSize="20sp"
+                android:text="현금 한도"
+                />
+            <TextView
+                android:id="@+id/cashlimit2"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.5"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/cashLimit"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/edit_edge"
+                android:fontFamily="@font/app_main_font"
+                android:maxLines="1"
+                android:autoSizeTextType="uniform"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:text="0" />
+            <TextView
+                android:id="@+id/cashWon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/cashlimit2"
+                app:layout_constraintLeft_toRightOf="@id/cashlimit2"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/app_main_font"
+                android:textSize="22sp"
+                android:textColor="@color/appMainOrange"
+                android:text="원"
+                />
+            <TextView
+                android:id="@+id/cashHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/cashlimit2"
+                android:layout_marginTop="3dp"
+                app:layout_constraintLeft_toLeftOf="@id/cashlimit2"
+                app:layout_constraintRight_toRightOf="@id/cashlimit2"
+                android:fontFamily="@font/app_main_font"
+                android:textSize="12sp"
+                android:text="0원 입력 시 한도 없음"
+                />
+
+            <View
+                android:id="@+id/divider0"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/cashHelp"
+                android:background="@color/tabWhite" />
+
+            <!--1번 카드-->
+
+            <TextView
+                android:id="@+id/card1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/app_main_font"
+                android:includeFontPadding="false"
+                android:text="1번 카드"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider0" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/card1sw"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="@id/card1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/card1"
+                android:layout_marginRight="20dp"
+                android:track="@drawable/switch_track_selector"
+                android:thumb="@drawable/switch_thumb" />
+
+            <include
+                android:id="@+id/card1info"
+                layout="@layout/setting_cardinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/card1"
+                android:visibility="gone"
+                />
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/card1info"
+                android:background="@color/tabWhite" />
+
+            <!--2번 카드-->
+            <TextView
+                android:id="@+id/card2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/app_main_font"
+                android:text="2번 카드"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/card2sw"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="@id/card2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/card2"
+                android:layout_marginRight="20dp"
+                android:track="@drawable/switch_track_selector"
+                android:thumb="@drawable/switch_thumb" />
+
+            <include
+                android:id="@+id/card2info"
+                layout="@layout/setting_cardinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/card2"
+                android:layout_marginBottom="70dp"
+                android:visibility="gone"
+                />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/card2info"
+                android:background="@color/tabWhite" />
+
+            <!--3번 카드-->
+            <TextView
+                android:id="@+id/card3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/divider2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/app_main_font"
+                android:textSize="20sp"
+                android:text="3번 카드"
+                />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/card3sw"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="@id/card3"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/card3"
+                android:layout_marginRight="20dp"
+                android:track="@drawable/switch_track_selector"
+                android:thumb="@drawable/switch_thumb"
+                android:layout_marginLeft="10dp" />
+
+            <include
+                android:id="@+id/card3info"
+                layout="@layout/setting_cardinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/card3"
+                android:visibility="gone"
+                />
+
+            <Button
+                android:id="@+id/finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/card3info"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/btround"
+                android:text="확인"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+</FrameLayout>

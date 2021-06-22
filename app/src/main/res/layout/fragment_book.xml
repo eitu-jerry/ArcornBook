@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/datePicker"
+            layout="@layout/book_fragment_date"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/viewPagerTab"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/datePicker"
+            android:background="@color/white"
+            app:tabTextAppearance="@style/tab_text"
+            app:tabIndicatorColor="@color/appMainDarkBrown"
+            app:tabIndicatorHeight="30dp" />
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="70dp"
+            app:layout_constraintTop_toBottomOf="@id/viewPagerTab" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

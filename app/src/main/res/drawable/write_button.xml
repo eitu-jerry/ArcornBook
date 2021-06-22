@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <padding
+                android:top="10dp"
+                android:left="10dp"
+                android:right="10dp"
+                android:bottom="10dp"/>
+            <solid android:color="#00555555"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <padding
+                android:top="10dp"
+                android:left="10dp"
+                android:right="10dp"
+                android:bottom="10dp"/>
+            <solid android:color="#10CCCCCC"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <padding
+                android:top="10dp"
+                android:left="10dp"
+                android:right="10dp"
+                android:bottom="10dp"/>
+            <solid android:color="#20CCCCCC"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <padding
+                android:top="10dp"
+                android:left="10dp"
+                android:right="10dp"
+                android:bottom="10dp"/>
+            <solid android:color="#30CCCCCC"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <padding
+                android:top="10dp"
+                android:left="10dp"
+                android:right="10dp"
+                android:bottom="10dp"/>
+            <solid android:color="#40CCCCCC"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <padding
+                android:top="10dp"
+                android:left="10dp"
+                android:right="10dp"
+                android:bottom="10dp"/>
+            <solid android:color="#50CCCCCC"/>
+        </shape>
+    </item>
+    <item>
+        <bitmap
+            android:src="@drawable/write_button_image" />
+    </item>
+
+</layer-list>

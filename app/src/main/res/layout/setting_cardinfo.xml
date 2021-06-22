@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/cardName"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:paddingBottom="2dp"
+        android:background="@drawable/edit_edge"
+        android:hint="카드 이름"
+        android:fontFamily="@font/app_main_font"
+        android:singleLine="true"
+        android:autoSizeTextType="uniform"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:maxLength="10"
+        android:autofillHints="카드 이름" />
+    <TextView
+        android:id="@+id/cardLimit"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cardName"
+        app:layout_constraintLeft_toLeftOf="@id/cardName"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="2dp"
+        android:background="@drawable/edit_edge"
+        android:text="0"
+        android:maxLines="1"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/app_main_font"
+        android:textSize="20sp"
+        android:textAlignment="center" />
+    <TextView
+        android:id="@+id/won"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/cardLimit"
+        app:layout_constraintLeft_toRightOf="@id/cardLimit"
+        android:layout_marginLeft="5dp"
+        android:fontFamily="@font/app_main_font"
+        android:textSize="22sp"
+        android:textColor="@color/appMainOrange"
+        android:text="원"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/cardLimit"
+        android:layout_marginTop="3dp"
+        app:layout_constraintLeft_toLeftOf="@id/cardLimit"
+        app:layout_constraintRight_toRightOf="@id/cardLimit"
+        android:fontFamily="@font/app_main_font"
+        android:textSize="12sp"
+        android:text="0원 입력 시 한도 없음"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

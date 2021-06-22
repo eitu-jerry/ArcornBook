@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SettingListFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tabWhite">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" >
+
+            <include
+                android:id="@+id/set1"
+                layout="@layout/setting_list1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+            <View
+                android:id="@+id/divider0"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintTop_toBottomOf="@id/set1"
+                android:layout_marginTop="20dp"
+                android:background="@color/tabWhite" />
+
+            <include
+                android:id="@+id/set2"
+                layout="@layout/setting_list2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/divider0"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintTop_toBottomOf="@id/set2"
+                android:layout_marginTop="20dp"
+                android:background="@color/tabWhite" />
+
+            <TextView
+                android:id="@+id/set3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/divider1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:maxLines="1"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/app_main_font"
+                android:textAlignment="textStart"
+                android:textSize="23sp"
+                android:textColor="@color/appMainDarkBrown"
+                android:text="알림 받기" />
+            <TextView
+                android:id="@+id/set3help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/set3"
+                app:layout_constraintLeft_toLeftOf="@id/set3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="20dp"
+                android:maxLines="1"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/app_main_font"
+                android:textAlignment="textStart"
+                android:textSize="13sp"
+                android:textColor="@color/tGray"
+                android:text="가계부 알림과 공지를 받아요" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/set3sw"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="@id/set3"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/set3help"
+                android:layout_marginRight="20dp"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track_selector"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>

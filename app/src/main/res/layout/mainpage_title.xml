@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:maxLines="1"
+        android:autoSizeTextType="uniform"
+        android:includeFontPadding="false"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="오늘의 지출"
+        android:textColor="@color/appMainBrown"
+        android:fontFamily="@font/app_main_font" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

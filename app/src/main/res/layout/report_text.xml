@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/useinfo_back"
+    android:paddingTop="10dp"
+    android:paddingBottom="7dp"
+    android:paddingLeft="10dp"
+    android:elevation="3dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@color/transparent"
+        android:fontFamily="@font/app_main_font"
+        android:autoSizeTextType="uniform"
+        android:textSize="20sp"
+        android:textAlignment="textStart"
+        android:textColor="@color/appMainOrange"
+        android:text="식비 총 "/>
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/Text"
+        android:background="@color/transparent"
+        android:fontFamily="@font/app_main_font"
+        android:autoSizeTextType="uniform"
+        android:textSize="20sp"
+        android:textAlignment="textStart"
+        android:textColor="@color/appMainDarkBrown"
+        android:text="6회"/>
+    <TextView
+        android:id="@+id/Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@color/transparent"
+        android:fontFamily="@font/app_main_font"
+        android:maxLines="1"
+        android:autoSizeTextType="uniform"
+        android:layout_marginTop="15dp"
+        android:textSize="32sp"
+        android:textAlignment="textStart"
+        android:textColor="@color/appMainDarkBrown"
+        android:text="60,000원"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

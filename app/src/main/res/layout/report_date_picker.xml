@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/appMainBrown"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <NumberPicker
+        android:id="@+id/yearPicker"
+        android:theme="@style/numberPicker_text"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/year"
+        android:descendantFocusability="blocksDescendants"
+        android:background="@color/transparent"/>
+    <TextView
+        android:id="@+id/year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/yearPicker"
+        app:layout_constraintLeft_toRightOf="@id/yearPicker"
+        app:layout_constraintRight_toLeftOf="@id/monthPicker"
+        app:layout_constraintBottom_toBottomOf="@id/yearPicker"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/app_main_font"
+        android:includeFontPadding="false"
+        android:textSize="25sp"
+        android:textColor="@color/appMainOrangeDown"
+        android:text="년" />
+
+    <NumberPicker
+        android:id="@+id/monthPicker"
+        android:theme="@style/numberPicker_text"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="@id/yearPicker"
+        app:layout_constraintLeft_toRightOf="@id/year"
+        app:layout_constraintRight_toLeftOf="@id/month"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/monthPicker"
+        app:layout_constraintLeft_toRightOf="@id/monthPicker"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/monthPicker"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/app_main_font"
+        android:includeFontPadding="false"
+        android:textSize="25sp"
+        android:textColor="@color/appMainOrangeDown"
+        android:text="월" />
+
+    <ImageButton
+        android:id="@+id/go"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toBottomOf="@id/yearPicker"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:elevation="2dp"
+        app:tint="@color/appMainOrangeDown"
+        android:src="@drawable/ic_baseline_search_24"
+        android:background="@color/appMainDarkBrown" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

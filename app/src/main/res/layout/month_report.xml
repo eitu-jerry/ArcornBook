@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:maxLines="1"
+                android:autoSizeTextType="uniform"
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@color/appMainBrown"
+                android:fontFamily="@font/app_main_font"
+                android:text="@string/appTitle"
+                android:textStyle="bold"
+                android:textColor="@color/appMainOrangeDown"
+                android:textSize="30sp" />
+
+            <include
+                android:id="@+id/datePicker"
+                layout="@layout/report_date_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:layout_constraintLeft_toLeftOf="@id/title" />
+
+
+            <ImageView
+                android:id="@+id/eat"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/meal"
+                android:background="@drawable/pattern_stroke"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/datePicker"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="20dp"/>
+            <include
+                layout="@layout/report_text"
+                android:id="@+id/eatText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="20dp"
+                app:layout_constraintTop_toTopOf="@id/eat"
+                app:layout_constraintLeft_toRightOf="@id/eat"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+            <ImageView
+                android:id="@+id/shopping"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/shopping"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/pattern_stroke"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/eatText"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="20dp"/>
+            <include
+                layout="@layout/report_text"
+                android:id="@+id/shoppingText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="20dp"
+                app:layout_constraintTop_toTopOf="@id/shopping"
+                app:layout_constraintLeft_toRightOf="@id/shopping"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <ImageView
+                android:id="@+id/car"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/car"
+                android:background="@drawable/pattern_stroke"
+                android:padding="10dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@id/shoppingText"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="20dp"/>
+            <include
+                layout="@layout/report_text"
+                android:id="@+id/carText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="20dp"
+                app:layout_constraintTop_toTopOf="@id/car"
+                app:layout_constraintLeft_toRightOf="@id/car"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <ImageView
+                android:id="@+id/hobby"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/hobby"
+                android:background="@drawable/pattern_stroke"
+                android:padding="10dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@id/carText"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="20dp"/>
+            <include
+                layout="@layout/report_text"
+                android:id="@+id/hobbyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="20dp"
+                app:layout_constraintTop_toTopOf="@id/hobby"
+                app:layout_constraintLeft_toRightOf="@id/hobby"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <ImageView
+                android:id="@+id/hos"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/hospital"
+                android:background="@drawable/pattern_stroke"
+                android:padding="10dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@id/hobbyText"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="20dp"/>
+            <include
+                layout="@layout/report_text"
+                android:id="@+id/hosText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="20dp"
+                app:layout_constraintTop_toTopOf="@id/hos"
+                app:layout_constraintLeft_toRightOf="@id/hos"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <ImageView
+                android:id="@+id/etc"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/arcorn_moneybag"
+                android:background="@drawable/pattern_stroke"
+                android:padding="10dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@id/hosText"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="10dp"/>
+            <include
+                layout="@layout/report_text"
+                android:id="@+id/etcText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintTop_toTopOf="@id/etc"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/etc"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

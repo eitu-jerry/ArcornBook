@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/cafe24</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="singleLine">true</item>
+        <item name="android:maxLines">1</item>
+        <item name="autoSizeTextType">uniform</item>
+    </style>
+    <style name="spinner_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/cafe24</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="numberPicker_text">
+        <item name="android:fontFamily">@font/cafe24</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:editTextColor">@color/appMainOrange</item>
+        <item name="maxLines">1</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:paddingTop">3dp</item>
+    </style>
+</resources>

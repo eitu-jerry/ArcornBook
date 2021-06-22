@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="5dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:elevation="3dp"
+    android:background="@drawable/useinfo_back"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@color/transparent"
+        android:layout_marginTop="12dp"
+        android:maxLines="1"
+        android:autoSizeTextType="uniform"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:textColor="@color/appMainOrange"
+        android:textSize="16sp"
+        android:text="테스트1  |  현금"
+        android:fontFamily="@font/app_main_font" />
+    <TextView
+        android:id="@+id/price1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/title1"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:autoSizeTextType="uniform"
+        android:textAlignment="textStart"
+        android:textSize="28sp"
+        android:textColor="@color/appMainDarkBrown"
+        android:fontFamily="@font/app_main_font"
+        android:text="30,000원" />
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/price1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@color/transparent"
+        android:layout_marginTop="12dp"
+        android:maxLines="1"
+        android:autoSizeTextType="uniform"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:textColor="@color/appMainOrange"
+        android:textSize="16sp"
+        android:text="테스트2"
+        android:fontFamily="@font/app_main_font" />
+    <TextView
+        android:id="@+id/price2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/title2"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:autoSizeTextType="uniform"
+        android:textAlignment="textStart"
+        android:textSize="28sp"
+        android:textColor="@color/appMainDarkBrown"
+        android:fontFamily="@font/app_main_font"
+        android:text="30,000원" />
+
+    <TextView
+        android:id="@+id/title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/price2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@color/transparent"
+        android:layout_marginTop="12dp"
+        android:maxLines="1"
+        android:autoSizeTextType="uniform"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:textColor="@color/appMainOrange"
+        android:textSize="16sp"
+        android:text="테스트3"
+        android:fontFamily="@font/app_main_font" />
+    <TextView
+        android:id="@+id/price3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/title3"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:autoSizeTextType="uniform"
+        android:textAlignment="textStart"
+        android:textSize="28sp"
+        android:textColor="@color/appMainDarkBrown"
+        android:fontFamily="@font/app_main_font"
+        android:text="30,000원" />
+
+    <TextView
+        android:id="@+id/more2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/price3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@color/transparent"
+        android:layout_marginTop="30dp"
+        android:maxLines="1"
+        android:autoSizeTextType="uniform"
+        android:textAlignment="center"
+        android:textColor="@color/appMainBrown"
+        android:textSize="13sp"
+        android:text="최근 입력한 3건까지 표시됩니다"
+        android:fontFamily="@font/app_main_font" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
