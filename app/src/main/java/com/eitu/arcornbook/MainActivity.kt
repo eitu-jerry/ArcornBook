@@ -229,7 +229,7 @@ class MainActivity : AppCompatActivity() {
         val sp = getSharedPreferences("isFirst", Context.MODE_PRIVATE)
 
         if(sp.getBoolean("isFirst", true)){
-            currentF = 9
+            currentF = 10
 
             openFirstFrame()
 
@@ -275,7 +275,7 @@ class MainActivity : AppCompatActivity() {
         //에디터 값을 적용함
         editor.apply()
 
-        if(currentF == 9){ //첫 실행 시 설정 화면인지
+        if(currentF == 10){ //첫 실행 시 설정 화면인지
             currentF = 0
             removeFirstFrame()
             clickHome()
@@ -305,8 +305,8 @@ class MainActivity : AppCompatActivity() {
 
     //설정 화면에서 한도 설정 시 뜨는 값 입력 프래그먼트 설정
     fun openInput(id:Int){
-        currentF = if(currentF == 4) 5 else 10 //앱 첫 실행 후 설정화면에서 호출된것인지 일반 설정인지 구분하기 위함
-        //일반 설정 -> 5
+        currentF = if(currentF == 4) 5 else 11 //앱 첫 실행 후 설정화면에서 호출된것인지 일반 설정인지 구분하기 위함
+        //일반 설정 -> 4
         //첫 실행 설정 -> 10
 
         when(id){
@@ -317,7 +317,7 @@ class MainActivity : AppCompatActivity() {
             else->{}
         }
 
-        if(currentF == 10){
+        if(currentF == 11){
             val fragment = supportFragmentManager.findFragmentByTag("firstSetting") as FirstSetFragment?
             fragment?.turnTextView(whichTextView) //텍스트 뷰 클릭한 후 종료 전까지 중복 클릭을 방지하기 위함
         }
@@ -334,6 +334,7 @@ class MainActivity : AppCompatActivity() {
         transaction.setCustomAnimations(R.anim.input_open, R.anim.input_close, R.anim.input_open, R.anim.input_close)
         transaction.add(R.id.frameL2, setInput)
         transaction.addToBackStack(null)
+        binding.frameL2.bringToFront()
         transaction.commit()
 
         sfm.executePendingTransactions()
@@ -655,6 +656,7 @@ class MainActivity : AppCompatActivity() {
 
     //현재 화면이 어떤 화면인지에 따라 백버튼 입력시 실행되는지가 다르다
     override fun onBackPressed() {
+        Log.d("currentF", "$currentF")
         when(currentF){
             0->{
                 //메인 페이지
@@ -740,7 +742,7 @@ class MainActivity : AppCompatActivity() {
 
                 removeFrame()
 
-                currentF = 9
+                currentF = 10
 
                 val fragment = supportFragmentManager.findFragmentByTag("firstSetting") as FirstSetFragment?
                 fragment?.turnTextView(whichTextView)

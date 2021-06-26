@@ -5,7 +5,7 @@
     android:background="@drawable/spinner_back"
     android:padding="5dp"
     android:textColor="@color/black"
-    android:textSize="18sp"
+    android:textSize="22sp"
     android:layout_marginBottom="3dp"
     android:fontFamily="@font/app_main_font"
     />
